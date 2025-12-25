@@ -1,0 +1,121 @@
+{
+  "module": {
+    "name": "entry",
+    "routerMap": "$profile:route_map",
+    "type": "entry",
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "phone"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:app",
+        "label": "$string:EntryAbility_label",
+        "startWindow": "$profile:start_window",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        //qq、微信id
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home",
+              "entity.system.browsable"
+            ],
+            "actions": [
+              "action.system.home",
+              "ohos.want.action.viewData",
+              "ohos.want.action.home"
+
+            ],
+            "uris": [
+              {
+                "scheme": "qqopenapi",
+                // 接收 QQ 回调数据
+                "host": "102022239",
+                // 业务申请的互联 appId
+                "pathRegex": "\\b(auth|share)\\b",
+                "linkFeature": "logintest"//"Login",
+              },
+              {
+                // scheme须配置为https
+                "scheme": "https",
+                // host须配置为关联的域名
+                "host": "mvn.mob.com"
+              }
+            ],
+            "domainVerify": true
+          }
+        ]
+      }
+    ],
+
+    "querySchemes": [
+      "weixin",
+      //qq
+      "https",
+      "qqopenapi"
+    ],
+    "metadata": [
+      // 配置信息如下-华为登录配置
+      {
+        "name": "client_id",
+        "value": "6917593040779206025"
+      }
+    ],
+
+    "requestPermissions": [
+      //添加网络权限
+      {
+        "name": "ohos.permission.INTERNET"
+      },
+      //添加震动权限
+      {
+        "name": "ohos.permission.VIBRATE"
+      },
+      //系统推送权限
+      {
+        "name": "ohos.permission.READ_CALENDAR",
+        "reason": "$string:calendar_reason",  // 引用刚才定义的字符串
+        "usedScene": {
+          "abilities": [
+            "EntryAbility" // 这里填你使用该权限的 Ability 名称
+          ],
+          "when": "inuse" // 表示在使用应用时使用
+        }
+      },
+      {
+        "name": "ohos.permission.WRITE_CALENDAR",
+        "reason": "$string:calendar_reason", // 引用刚才定义的字符串
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      }
+
+    ],
+    "extensionAbilities": [
+      {
+        "name": "EntryBackupAbility",
+        "srcEntry": "./ets/entrybackupability/EntryBackupAbility.ets",
+        "type": "backup",
+        "exported": false,
+        "metadata": [
+          {
+            "name": "ohos.extension.backup",
+            "resource": "$profile:backup_config"
+          }
+        ],
+      }
+    ]
+  }
+}

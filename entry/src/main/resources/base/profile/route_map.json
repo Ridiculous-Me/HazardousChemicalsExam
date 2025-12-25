@@ -1,0 +1,172 @@
+{
+  "routerMap": [
+    {
+      "name": "Index",
+      "pageSourceFile": "src/main/ets/pages/Index.ets",
+      "buildFunction": "IndexBuilder",
+      "data": {
+        "description": "This is Index"
+      }
+    },
+    {
+      "name": "Layout",
+      "pageSourceFile": "src/main/ets/pages/Layout.ets",
+      "buildFunction": "LayoutBuilder",
+      "data": {
+        "description": "This is Layout"
+      }
+    },
+    {
+      "name": "ExamComponent",
+      "pageSourceFile": "src/main/ets/exam/ExamComponent.ets",
+      "buildFunction": "ExamComponentBuilder",
+      "data": {
+        "description": "This is ExamComponent"
+      }
+    },
+    {
+      "name": "AboutUs",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/Mine/AboutUs.ets",
+      "buildFunction": "AboutUsBuilder",
+      "data": {
+        "description": "This is AboutUs"
+      }
+    },
+    {
+      "name": "Seek",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/Home/Search/Seek.ets",
+      "buildFunction": "SeekBuilder",
+      "data": {
+        "description": "This is Seek"
+      }
+    },
+    {
+      "name": "SeekDetails",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/Home/Search/SeekDetails.ets",
+      "buildFunction": "SeekDetailsBuilder",
+      "data": {
+        "description": "This is SeekDetails"
+      }
+    },
+    {
+      "name": "RandomPractice",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/Home/Random/RandomPractice.ets",
+      "buildFunction": "RandomPracticeBuilder",
+      "data": {
+        "description": "This is RandomPractice"
+      }
+    },
+    {
+      "name": "RandomExamPage",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/Home/Random/RandomExamPage.ets",
+      "buildFunction": "RandomExamPageBuilder",
+      "data": {
+        "description": "This is RandomExamPage"
+      }
+    },
+    {
+      "name": "LimitedTimeTraining",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/Home/LimitedTime/LimitedTimeTraining.ets",
+      "buildFunction": "LimitedTimeTrainingBuilder",
+      "data": {
+        "description": "This is LimitedTimeTraining"
+      }
+    },
+    {
+      "name": "CollectionPage",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/PunchIn/Collection/CollectionPage.ets",
+      "buildFunction": "CollectionPageBuilder",
+      "data": {
+        "description": "This is CollectionPage"
+      }
+    },
+    {
+      "name": "WrongPage",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/PunchIn/Wrong/WrongPage.ets",
+      "buildFunction": "WrongPageBuilder",
+      "data": {
+        "description": "This is WrongPage"
+      }
+    },
+    {
+      "name": "AutoExamPage",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/PunchIn/Wrong/AutoExamPage.ets",
+      "buildFunction": "AutoExamPageBuilder",
+      "data": {
+        "description": "This is AutoExamPage"
+      }
+    },
+    {
+      "name": "PunchInDetailPage",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/PunchIn/Punchin/PunchInDetailPage.ets",
+      "buildFunction": "PunchInDetailPageBuilder",
+      "data": {
+        "description": "This is PunchInDetailPage"
+      }
+    },
+    {
+      "name": "DataReportPage",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/PunchIn/DataReport/DataReportPage.ets",
+      "buildFunction": "DataReportPageBuilder",
+      "data": {
+        "description": "This is DataReportPage"
+      }
+    },
+    {
+      "name": "FocusHistoryPage",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/PunchIn/FocusHistory/FocusHistoryPage.ets",
+      "buildFunction": "FocusHistoryPageBuilder",
+      "data": {
+        "description": "This is FocusHistoryPage"
+      }
+    },
+    {
+      "name": "CitySelectPage",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/Home/CitySelectPage.ets",
+      "buildFunction": "CitySelectPageBuilder",
+      "data": {
+        "description": "This is CitySelectPage"
+      }
+    },
+    {
+      "name": "Feedback",
+      "pageSourceFile": "src/main/ets/SpecificFunctions/Mine/Feedback.ets",
+      "buildFunction": "FeedbackBuilder",
+      "data": {
+        "description": "This is Feedback"
+      }
+    },
+    {
+      "name": "PrivacyPolicy",
+      "pageSourceFile": "src/main/ets/other/PrivacyPolicy.ets",
+      "buildFunction": "PrivacyPolicyBuilder",
+      "data": {
+        "description": "This is PrivacyPolicy"
+      }
+    },
+    {
+      "name": "UserAgreement",
+      "pageSourceFile": "src/main/ets/other/UserAgreement.ets",
+      "buildFunction": "UserAgreementBuilder",
+      "data": {
+        "description": "This is UserAgreement"
+      }
+    },
+    {
+      "name": "Login",
+      "pageSourceFile": "src/main/ets/Login/Login.ets",
+      "buildFunction": "LoginBuilder",
+      "data": {
+        "description": "This is Login"
+      }
+    },
+    {
+      "name": "Splash",
+      "pageSourceFile": "src/main/ets/pages/Splash.ets",
+      "buildFunction": "SplashBuilder",
+      "data": {
+        "description": "This is Splash"
+      }
+    }
+  ]
+}

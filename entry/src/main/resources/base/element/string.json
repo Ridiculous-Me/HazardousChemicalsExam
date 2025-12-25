@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "危险化学品考试通关王"
+    },
+    {
+      "name": "calendar_reason",
+      "value": "我们需要读取和写入日历，以便为您设置每日学习打卡提醒。"
+    }
+  ]
+}

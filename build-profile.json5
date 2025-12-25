@@ -1,0 +1,88 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "storeFile": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam/AppScope/Key/lankawei.p12",
+          "storePassword": "0000001AF4B12DD5E4D0E52773F6B36E53973ACFD258CBFD8B3FED47DEC416753692AB1CE7DA38ED7D04",
+          "keyAlias": "mx",
+          "keyPassword": "0000001AB9CB89FF0C5A25BE68E4213B36514887766CB1800E3BD6AA2B40881CA85AFC8603A0804E14DF",
+          "signAlg": "SHA256withECDSA",
+          "profile": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam/AppScope/Key/危险化学品考试通关王-调试Debug.p7b",
+          "certpath": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam/AppScope/Key/lkwcer.cer"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "targetSdkVersion": "5.1.1(19)",
+        "compatibleSdkVersion": "5.1.1(19)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "exam",
+      "srcPath": "./ohos_agcit/agcit_huawei_driver_license_exam_exam/exam"
+    },
+    {
+      "name": "common",
+      "srcPath": "./common",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "module_login",
+      "srcPath": "./ohos_agcit/agcit_huawei_home_decoration_module_login/components/module_login"
+    },
+    {
+      "name": "feed_back",
+      "srcPath": "./ohos_agcit/agcit_huawei_exam_feed_back/feed_back"
+    },
+    {
+      "name": "module_share",
+      "srcPath": "./ohos_agcit/agcit_huawei_comprehensive_news_module_share/module_share"
+    },
+    {
+      "name": "check_app_update",
+      "srcPath": "./ohos_agcit/agcit_huawei_enterprise_recruitment_check_app_update/check_app_update"
+    }
+  ]
+}
