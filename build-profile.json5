@@ -6,12 +6,12 @@
         "type": "HarmonyOS",
         "material": {
           "storeFile": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam_All/AppScope/Key/mixiang.p12",
-          "storePassword": "0000001A6343F588B9A09ABD2EB706CFCC1BC60BDC7339E9DC28EA4A5BD30C3DCFB9E2413D41C8E44CF2",
+          "storePassword": "0000001A94A64C377D06B72A5B33FA558E960189C55CB0689F87D21B5FEB6878C6AC9FF7B2E902288AE6",
           "keyAlias": "mixiang",
-          "keyPassword": "0000001A3176349F410FCA80C140B4ECE4A2EB1F4D4C4419003654E6D3EA71FC77E4047A9C577E854716",
+          "keyPassword": "0000001A9DE878682627048F4CE897EE234D90F17E8D3C528F7B1E8617CEF77D4AB73CAB8545D9973A0D",
           "signAlg": "SHA256withECDSA",
-          "profile": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam_All/AppScope/Key/危险化学品考试通关王-调试Debug.p7b",
-          "certpath": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam_All/AppScope/Key/米象-调试.cer"
+          "profile": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam_All/AppScope/Key/危险化学品考试通关王-发布Release.p7b",
+          "certpath": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam_All/AppScope/Key/米象-发布.cer"
         }
       }
     ],
