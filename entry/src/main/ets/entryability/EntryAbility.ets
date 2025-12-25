@@ -29,7 +29,7 @@ export default class EntryAbility extends UIAbility {
 
 
     //初始化第三方MobSDK
-    ZztSDK.init(this.context, "36a3bea273dd7", "7bc41e13c1f339009e15389c750085e9")
+    ZztSDK.init(this.context, "2f89ff2528b17", "5c3b465e1732de147ff130d6c72540dc")
     ZztSDK.submitPolicyGrantResult(true);
 
     //设置授权需要的UIAbilityContext放在初始化之后调用

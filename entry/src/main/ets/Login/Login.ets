@@ -24,6 +24,7 @@ export struct Login {
 
   @StorageLink('sign') sign: string = ''
 
+
   @StorageLink('userInfo') userInfo: userInfo = {
     nickname: '',
     headimg: ''
@@ -52,89 +53,89 @@ export struct Login {
         // 2. 内容层：Slogan + 底部登录按钮
         // ---------------------------------------------------------
         Column() {
-         Column(){
-           // --- 顶部 Slogan 区域 ---
-           Column() {
-             Text('危险化学品')
-               .fontSize(36)
-               .fontWeight(FontWeight.Bold)
-               .fontColor('#0D47A1') // 深蓝字，显眼
-               .margin({ bottom: 10 })
-               .letterSpacing(2)
-             Text('考试通过王')
-               .fontSize(40)
-               .fontWeight(FontWeight.Bold)
-               .fontColor('#0D47A1') // 深蓝字，显眼
-               .margin({ bottom: 10 })
-               .letterSpacing(2)
+          Column(){
+            // --- 顶部 Slogan 区域 ---
+            Column() {
+              Text('危险化学品')
+                .fontSize(36)
+                .fontWeight(FontWeight.Bold)
+                .fontColor('#0D47A1') // 深蓝字，显眼
+                .margin({ bottom: 10 })
+                .letterSpacing(2)
+              Text('考试通过王')
+                .fontSize(40)
+                .fontWeight(FontWeight.Bold)
+                .fontColor('#0D47A1') // 深蓝字，显眼
+                .margin({ bottom: 10 })
+                .letterSpacing(2)
 
-             Text("让考试更简单，更高效")
-               .fontSize(16)
-               .fontColor('#546E7A')
-               .letterSpacing(1)
-               .opacity(0.8)
-           }
-           .margin({ top: '30%' }) // 距离顶部的位置
-
-
-           // --- 底部 登录区域 ---
-           Column({space: 30}) {
-
-             Row(){
-               Image($r('app.media.ic_login_wechat'))
-                 .width('70%')
-             }
-             .visibility(Visibility.Hidden)
-
-             Row(){
-               Image($r('app.media.ic_login_qq'))
-                 .width('70%')
-             }
-             .visibility(Visibility.Hidden)
-
-             Row(){
-               Image($r('app.media.135'))
-                 .width('70%')
-             }
-             .margin({top: -110})
-             .zIndex(-9)
-             .onClick(async () => {
-
-               if(!this.isClick){
-                 PromptMessage.showMessage('请勾选用户协议和隐私政策')
-                 return
-               }
-
-               PromptMessage.showMessage('正在登录...')
-
-               try {
-                 const context = getContext(this) as common.UIAbilityContext
-
-                 await this.harmonyLogin.getHarmonyUserinfo(context)
-
-                 this.userId = this.harmonyLogin.userInfo.user_id!.toString()
-
-                 this.sign = this.harmonyLogin.sign
-
-                 this.isLogin = true
+              Text("让考试更简单，更高效")
+                .fontSize(16)
+                .fontColor('#546E7A')
+                .letterSpacing(1)
+                .opacity(0.8)
+            }
+            .margin({ top: '30%' }) // 距离顶部的位置
 
 
-                 this.userInfo.nickname = this.harmonyLogin.loginUser.nickName
-                 this.userInfo.headimg = this.harmonyLogin.loginUser.imgurl
+            // --- 底部 登录区域 ---
+            Column({space: 30}) {
+
+              Row(){
+                Image($r('app.media.ic_login_wechat'))
+                  .width('70%')
+              }
+              .visibility(Visibility.Hidden)
+
+              Row(){
+                Image($r('app.media.ic_login_qq'))
+                  .width('70%')
+              }
+              .visibility(Visibility.Hidden)
+
+              Row(){
+                Image($r('app.media.135'))
+                  .width('70%')
+              }
+              .margin({top: -110})
+              .zIndex(-9)
+              .onClick(async () => {
+
+                if(!this.isClick){
+                  PromptMessage.showMessage('请勾选用户协议和隐私政策')
+                  return
+                }
+
+                PromptMessage.showMessage('正在登录...')
+
+                try {
+                  const context = getContext(this) as common.UIAbilityContext
+
+                  await this.harmonyLogin.getHarmonyUserinfo(context)
+
+                  this.userId = this.harmonyLogin.userInfo.user_id!.toString()
+
+                  this.sign = this.harmonyLogin.sign
+
+                  this.isLogin = true
 
 
+                  this.userInfo.nickname = this.harmonyLogin.userInfo.nickname!
+                  this.userInfo.headimg = this.harmonyLogin.userInfo.headimg!
 
 
-                 this.pathStack.replacePathByName("Layout", null,false)
+                  console.log('user'+JSON.stringify(this.userInfo))
 
-               } catch (error) {
-                 PromptMessage.showMessage('登录失败')
-               }
-             })
+                  this.pathStack.replacePathByName("Layout", null,false)
 
-           }
-           .margin({top: '20%'})
-         }
+                } catch (error) {
+                  PromptMessage.showMessage('登录失败')
+                }
+              })
+
+            }
+            .margin({top: '20%'})
+          }
 
           Row(){
             Checkbox()

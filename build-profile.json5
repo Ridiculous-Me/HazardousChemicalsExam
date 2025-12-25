@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "storeFile": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam/AppScope/Key/lankawei.p12",
-          "storePassword": "0000001AF4B12DD5E4D0E52773F6B36E53973ACFD258CBFD8B3FED47DEC416753692AB1CE7DA38ED7D04",
-          "keyAlias": "mx",
-          "keyPassword": "0000001AB9CB89FF0C5A25BE68E4213B36514887766CB1800E3BD6AA2B40881CA85AFC8603A0804E14DF",
+          "storeFile": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam_All/AppScope/Key/mixiang.p12",
+          "storePassword": "0000001A6343F588B9A09ABD2EB706CFCC1BC60BDC7339E9DC28EA4A5BD30C3DCFB9E2413D41C8E44CF2",
+          "keyAlias": "mixiang",
+          "keyPassword": "0000001A3176349F410FCA80C140B4ECE4A2EB1F4D4C4419003654E6D3EA71FC77E4047A9C577E854716",
           "signAlg": "SHA256withECDSA",
-          "profile": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam/AppScope/Key/危险化学品考试通关王-调试Debug.p7b",
-          "certpath": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam/AppScope/Key/lkwcer.cer"
+          "profile": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam_All/AppScope/Key/危险化学品考试通关王-调试Debug.p7b",
+          "certpath": "C:/Users/Administrator/Desktop/Hazardous_Chemicals_Exam_All/AppScope/Key/米象-调试.cer"
         }
       }
     ],

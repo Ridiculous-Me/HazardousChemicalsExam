@@ -67,7 +67,7 @@ export struct LimitedTimeTraining {
     {
       title: '极限 10 分钟',
       time: 10,
-      count: 400,
+      count: 600,
       desc: '耐力与速度的双重考验',
       difficulty: '炼狱',
       color: '#909399'
@@ -232,7 +232,7 @@ export struct LimitedTimeTraining {
             .fontSize(24)
             .fontWeight(FontWeight.Bold)
             .fontColor('#333')
-          Text('题目数量')
+          Text('随机题目数量')
             .fontSize(12)
             .fontColor('#999')
             .margin({ top: 4 })

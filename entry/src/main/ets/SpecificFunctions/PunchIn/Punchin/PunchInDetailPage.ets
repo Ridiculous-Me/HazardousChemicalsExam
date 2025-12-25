@@ -131,7 +131,7 @@ struct DailyBadgeDialog {
             Row() {
               Blank()
               if (this.currentSkin) {
-                Image(this.userInfo.headimg).width(60).height(60).objectFit(ImageFit.Contain).opacity(0.9)
+                Image(this.userInfo.headimg).width(60).height(60).objectFit(ImageFit.Contain).opacity(0.9).borderRadius(30)
               }
             }.width('100%').padding({ left: 24, right: 24, bottom: 30 }).alignItems(VerticalAlign.Bottom)
           }.width('100%').height('100%')

@@ -80,6 +80,7 @@ export class HarmonyLogin {
 
   public userInfo: userInfoType = {} //登录后返回的用户信息
 
+
   public sign: string = ''
 
   public loginUser: LoginUser = {
@@ -93,7 +94,7 @@ export class HarmonyLogin {
   //加密方法
   async doMd(str: string | undefined): Promise<string> {
     let sha1 = shaEncryptSync(str,'SHA1')
-    console.log('加密后结果',sha1)
+    console.log('华为加密后结果',sha1)
     return sha1.toString()
   }
 
@@ -143,17 +144,17 @@ export class HarmonyLogin {
 
               this.sign = sign
 
-              //非登录主要
-              const Imgurl = await this.doMd32(this.userInfo.headimg)
-              this.loginUser = {
-                account: this.userInfo.user_id || 0,
-                nickName: this.userInfo.nickname || '',
-                imgurl: Imgurl || '',
-                appname: '危险化学品考试通关王'
-              }
+              // //非登录主要
+              // const Imgurl = await this.doMd32(this.userInfo.headimg)
+              // this.loginUser = {
+              //   account: this.userInfo.user_id || 0,
+              //   nickName: this.userInfo.nickname || '',
+              //   imgurl: Imgurl || '',
+              //   appname: '危险化学品考试通关王'
+              // }
 
-
-              console.log('鸿蒙登录用户信息:'+JSON.stringify(this.userInfo))
+              console.log('userInfoRes登录用户信息:'+JSON.stringify(userInfoRes.data))
+              console.log('userInfo鸿蒙登录用户信息:'+JSON.stringify(this.userInfo))
 
               PersistentStorage.persistProp('UserInfoData',this.userInfo)
 

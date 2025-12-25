@@ -554,6 +554,7 @@ export struct PunchIn {
     const m = this.reminderMinute.toString().padStart(2, '0');
     return `${h}:${m}`;
   }
+  @State isPlanReminderVisible: boolean = true;
 
   build() {
     Column() {
@@ -666,20 +667,38 @@ export struct PunchIn {
             .width('100%').padding(15).backgroundColor(Color.White).borderRadius(10).margin({ top: 12 }).alignItems(VerticalAlign.Center)
 
             // 2.5 制定计划提醒
-            if (this.targetNum <= 0) {
+            // 修改判断条件：只有当目标未设定(<=0) 且 提示可见(isPlanReminderVisible) 为 true 时才显示
+            if (this.targetNum <= 0 && this.isPlanReminderVisible) {
               Row() {
                 Row() {
-                  Row() { Image($r('app.media.cancel')).width(30) }.onClick(() => {
-
-                  })
                   Row() {
-                    Marquee({ start: true, step: 6, loop: -1, fromStart: true, src: '今日还未制定学习计划哦，点击前往制定~' }).fontSize(14).fontColor('#7ed4ba').width('100%')
+                    Image($r('app.media.cancel'))
+                      .width(30)
+                  }
+                  .onClick(() => {
+                    // --- 修改处：点击后将可见性设为 false，ArkUI 会自动移除该组件 ---
+                    animateTo({ duration: 300 }, () => {
+                      this.isPlanReminderVisible = false;
+                    })
+                  })
+
+                  Row() {
+                    Marquee({ start: true, step: 6, loop: -1, fromStart: true, src: '今日还未制定学习计划哦，点击前往制定~' })
+                      .fontSize(14).fontColor('#7ed4ba').width('100%')
                   }.layoutWeight(1).margin({ left: 5, right: 5 })
                 }.layoutWeight(1)
+
                 Row() { Text('制定计划').fontSize(14).fontColor(Color.White) }
-                .height(24).borderRadius(13).padding({ left: 4, right: 4 }).backgroundColor('#54e762').onClick(() => { this.targetDialogController.open(); })
-              }.width('100%').padding(6).backgroundColor('#d9f1ec').justifyContent(FlexAlign.SpaceBetween).borderRadius(10).margin({ top: 10 })
+                .height(24).borderRadius(13).padding({ left: 4, right: 4 })
+                .backgroundColor('#54e762')
+                .onClick(() => { this.targetDialogController.open(); })
+              }
+              .width('100%').padding(6).backgroundColor('#d9f1ec')
+              .justifyContent(FlexAlign.SpaceBetween).borderRadius(10).margin({ top: 10 })
+              // 建议加上 transition 效果，消失时更丝滑
+              .transition({ type: TransitionType.Delete, opacity: 0, scale: { x: 0.8, y: 0.8 } })
             }
+
 
             // ★★★ 每日提醒开关卡片 (支持点击改时间) ★★★
             Row() {
